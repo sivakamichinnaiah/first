@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover effect</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'poppins',sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #333333;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            border-radius:50%;
+            position: relative;
+            background-color: #222222;
+            text-decoration: none;
+            color: #aaaaaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid rgb(255, 255, 255, 0.35);
+            border-left: 1px solid rgb(255, 255, 255, 0.35);
+            padding-left: 40px;
+            transition: 0.5s;
+        }
+        .box:hover{
+            padding-left: 0px;
+            padding-right: 40px;
+            color: lightyellow;
+            font-weight:bold;
+            background-color:black;
+            cursor: pointer;
+        }
+        .circle{
+            position: absolute;
+            left: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color:deeppink;
+            color: white;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            transition:0.5s ease-in-out;
+        }
+        .circle:hover{
+            left: calc(70%);
+           background-color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hover Mouse
+    <div class="circle"></div>
+    </div> 
+</body>
+</html>
