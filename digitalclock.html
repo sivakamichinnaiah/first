@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'poppins',sans-serif;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background-color:#eeeeee;
+        }
+        .container{
+            margin-top:200px;
+            display:flex;
+            align-items:center;
+            justify-content:space-evenly;
+            width:210px;
+            height:60px;
+            background-color:#555555;
+            color:yellow;
+            border-radius:7px;
+            box-shadow:3px 3px 2px #000000;
+        }
+        .hours,.minutes,.seconds{
+            font-size:25px;
+            font-weight:bold;
+            border:1px solid yellow;
+            background-color:#333333;
+            box-shadow:3px 3px 2px #000000;
+            border-radius:5px;
+            padding:1px 5px;
+        }
+        .dots{
+            color:white;
+            font-weight:bold;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="hours" id="hours">00</span>
+        <span class="dots"><p>:</p></span>
+        <span class="minutes" id="minutes">00</span>
+        <span class="dots"><p>:</p></span>
+        <span class="seconds" id="seconds">00</span>
+    </div>
+    <script>
+       let hours = document.getElementById("hours");
+       let minutes = document.getElementById("minutes");
+       let seconds = document.getElementById("seconds");
+
+setInterval(()=>{
+    let currentTime = new Date();
+
+    hours.innerHTML = (currentTime.getHours()<10?"0":"")+currentTime.getHours();
+    minutes.innerHTML = (currentTime.getMinutes()<10?"0":"")+currentTime.getMinutes();
+    seconds.innerHTML = (currentTime.getSeconds()<10?"0":"")+currentTime.getSeconds();
+},1000);
+    </script>
+</body>
+</html>
