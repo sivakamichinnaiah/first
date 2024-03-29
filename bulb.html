@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulbON/OFF</title>
+    <style>
+        
+        img{
+            width:150px;
+            height:150px;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'poppins',sans-serif;
+        }
+        body{
+            height:100vh;
+            background-color:white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .bulb{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:200px;
+            width:200px;
+        }
+        .switch{
+            width:200px;
+            height:50px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        button{
+            height:30px;
+            width:50px;
+            background-color:palevioletred;
+            cursor:pointer;
+        }
+        button:hover{
+            background-color:white;
+            color:red;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bulb">
+            <div id="on">
+                <img src="https://jooinn.com/images/bulb-10.jpg">
+            </div>
+                
+            <div id="off">
+                <img src="https://jooinn.com/images/isolated-light-bulb-1.jpg">
+            </div>
+        </div>
+        <div class="switch">
+            <button onclick="on()">ON</button>
+            <button onclick="off()">OFF</button>
+        </div>
+    </div>
+    <script>
+        var bulbon=document.getElementById("on");
+        var bulboff=document.getElementById("off");
+        function on(){
+            bulbon.style.display="block";
+            bulboff.style.display="none";
+        }
+        function off(){
+            bulbon.style.display="none";
+            bulboff.style.display="block";
+        }
+    </script>
+</body>
+</html>
